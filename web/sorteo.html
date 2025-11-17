@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sorteo.css">
+    <title>Sorteo</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img id="logo" src="images/logo.png" width="80px"></img></a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">La Carrera</a>
+                    <ul>
+                        <li><a href="#">Circuito</a></li>
+                        <li><a href="#">Escuderías</a></li>
+                        <li><a href="#">Horarios</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Bilbao</a>
+                    <ul>
+                        <li><a href="#">Visítanos</a></li>
+                        <li><a href="#">Gastronomía</a></li>
+                        <li><a href="#">Alojamiento</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Entradas</a>
+                    <ul>
+                        <li><a href="comprar_entrada.html">Solo&nbsp;Carrera</a></li>
+                        <li><a href="acceso.html">Acceso</a></li>
+                    </ul>
+                </li>
+                <li><a href="sorteo.html">Sorteo Tres Primeros Pilotos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="sorteo-container">
+            <h1>Sorteo: Tres Primeros Pilotos de la Carrera</h1>
+            <p>En este sorteo podrás elegir tus tres primeros pilotos de la carrera. Los seleccionados serán sorteados y verás si acertaste algún puesto.</p>
+            
+            <form name="form" action="" method="POST">
+              <label for="piloto1">1er Piloto:</label>
+<select id="piloto1" name="piloto1">
+    <option value="">---</option>
+    <option value="Fernando Alonso">Fernando Alonso</option>
+    <option value="Lewis Hamilton">Lewis Hamilton</option>
+    <option value="Max Verstappen">Max Verstappen</option>
+    <option value="George Russell">George Russell</option>
+    <option value="Charles Leclerc">Charles Leclerc</option>
+    <option value="Carlos Sainz">Carlos Sainz</option>
+    <option value="Lando Norris">Lando Norris</option>
+    <option value="Oscar Piastri">Oscar Piastri</option>
+    <option value="Yuki Tsunoda">Yuki Tsunoda</option>
+    <option value="Esteban Ocon">Esteban Ocon</option>
+</select>
+<br><br>
+
+<label for="piloto2">2do Piloto:</label>
+<select id="piloto2" name="piloto2">
+    <option value="">---</option>
+    <option value="Fernando Alonso">Fernando Alonso</option>
+    <option value="Lewis Hamilton">Lewis Hamilton</option>
+    <option value="Max Verstappen">Max Verstappen</option>
+    <option value="George Russell">George Russell</option>
+    <option value="Charles Leclerc">Charles Leclerc</option>
+    <option value="Carlos Sainz">Carlos Sainz</option>
+    <option value="Lando Norris">Lando Norris</option>
+    <option value="Oscar Piastri">Oscar Piastri</option>
+    <option value="Yuki Tsunoda">Yuki Tsunoda</option>
+    <option value="Esteban Ocon">Esteban Ocon</option>
+</select>
+<br><br>
+
+<label for="piloto3">3er Piloto:</label>
+<select id="piloto3" name="piloto3">
+    <option value="">---</option>
+    <option value="Fernando Alonso">Fernando Alonso</option>
+    <option value="Lewis Hamilton">Lewis Hamilton</option>
+    <option value="Max Verstappen">Max Verstappen</option>
+    <option value="George Russell">George Russell</option>
+    <option value="Charles Leclerc">Charles Leclerc</option>
+    <option value="Carlos Sainz">Carlos Sainz</option>
+    <option value="Lando Norris">Lando Norris</option>
+    <option value="Oscar Piastri">Oscar Piastri</option>
+    <option value="Yuki Tsunoda">Yuki Tsunoda</option>
+    <option value="Esteban Ocon">Esteban Ocon</option>
+</select>
+                <br><br>
+    
+                <button type="button" onclick="realizarSorteo()">Realizar Sorteo</button>
+            </form>
+            <div id="resultado">
+            <div class="piloto-resultado">
+                <a><img src="" id="imagen"></a>
+                <h3 id="titulo"></h3>
+                <h3 style="color: green;" id="premio"></h3>
+            </div>
+            
+            <div class="piloto-resultado">
+                <a><img src="" id="imagen2"></a>
+                <h3 id="titulo2"></h3>
+                <h3 style="color: green;" id="premio2"></h3>
+            </div>
+            
+            <div class="piloto-resultado">
+                <a><img src="" id="imagen3"></a>
+                <h3 id="titulo3"></h3>
+                <h3 style="color: green;" id="premio3"></h3>
+            </div>
+        </div>
+        <div>
+            <h4 id="ultimo"></h4>
+            </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <p>&copy; 2025 F1 Bilbao. Todos los derechos reservados.</p>
+                <p><small>Marca registrada de F1 y Bilbao.</small></p>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="https://account.formula1.com/#/en/cookie-policy/" target="_blank">Política de Cookies</a></li>
+                    <li><a href="https://account.formula1.com/#/en/privacy-policy" target="_blank">Política de Privacidad</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://x.com/F1?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://x.com/F1?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="https://x.com/F1?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="images/insta.png" alt="Instagram"></a> 
+            </div>
+        </div>
+    </footer>
+    <script src="sorteo.js"></script>
+</body>
+</html>

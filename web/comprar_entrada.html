@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/entrada.css">
+    <title>Compra de Entradas</title>
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img id="logo" src="images/logo.png" width="80px"></img></a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">La Carrera</a>
+                    <ul>
+                        <li><a href="#">Circuito</a></li>
+                        <li><a href="#">Escuderías</a></li>
+                        <li><a href="#">Horarios</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Bilbao</a>
+                    <ul>
+                        <li><a href="#">Visítanos</a></li>
+                        <li><a href="#">Gastronomía</a></li>
+                        <li><a href="#">Alojamiento</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Entradas</a>
+                    <ul>
+                        <li><a href="comprar_entrada.html">Solo&nbsp;Carrera</a></li>
+                        <li><a href="acceso.html">Acceso</a></li>
+                    </ul>
+                </li>
+                <li><a href="sorteo.html">Sorteo Tres Primeros Pilotos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+    <h2>Formulario de Compra de Entrada</h2>
+    <form name="form1" action="javascript:void(0);" method="post" id="formulario" onsubmit="return validar()">
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" maxlength="9">
+        
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" >
+        
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" >
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" >
+        
+        <label for="tipo-entrada">Tipo de Entrada:</label>
+        <select id="tipo-entrada" name="tipo-entrada" onchange="actualizarPrecio()">
+            <option value="adulto">Adulto</option>
+            <option value="infantil">Infantil</option>
+        </select>
+        
+        <label for="zona">Zona:</label>
+        <select id="zona" name="zona" onchange="actualizarPrecio()">
+            <option value="zona1">Zona 1</option>
+            <option value="zona2">Zona 2</option>
+        </select>
+        
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" onchange="actualizarPrecio()" >
+        
+        <label for="precio">Precio:</label>
+        <input type="text" id="precio" name="precio" value="20€" disabled>
+        
+        <button type="submit">Comprar Entrada</button>
+    </form>
+    <br>    <br>
+  <p class="info-compra">
+  Al hacer clic en <strong>"Comprar Entrada"</strong>, se procesará tu solicitud. 
+  Recibirás un correo de confirmación con los detalles de tu compra.
+</p>
+
+</main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <p>&copy; 2025 F1 Bilbao. Todos los derechos reservados.</p>
+                <p><small>Marca registrada de F1 y Bilbao.</small></p>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="https://account.formula1.com/#/en/cookie-policy/" target="_blank">Política de Cookies</a></li>
+                    <li><a href="https://account.formula1.com/#/en/privacy-policy" target="_blank">Política de Privacidad</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://x.com/F1?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://x.com/F1?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="https://x.com/F1?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="images/insta.png" alt="Instagram"></a> 
+            </div>
+        </div>
+    </footer>
+    <script src="entrada.js"></script>
+</body>
+</html>
